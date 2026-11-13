@@ -1,0 +1,37 @@
+id: dea:maturity-technology
+repo_id: maturity-model-technology
+type: maturity-model
+name: Technology Maturity Model
+domain: technology
+version: 1.0.0
+metamodel_version: 1.0.0
+status: stable
+owner: CTO / Platform Engineering
+steward: CTO / Platform Engineering
+effective_date: 2026-08-21
+review_date: 2027-02-21
+description: Technology Maturity Model — assesses stack fitness, technical debt, lifecycle management
+  and skill coverage.
+score_scheme: dea-maturity-v2
+band_reference:
+  id: dea:maturity-bands-v2
+  version: 1.0.0
+  organization: technehub-labs
+  repository: dea-metamodel
+scale_levels:
+- L0
+- L1
+- L2
+- L3
+- L4
+relationships:
+- source_id: dea:maturity-technology
+  target_id: dea:maturity-bands-v2
+  relationship_type: scored-by-v2-bands
+- source_id: dea:maturity-technology
+  target_id: dea:catalog-standards
+  relationship_type: references
+tags:
+- maturity-model
+- technology
+- v2-canonical

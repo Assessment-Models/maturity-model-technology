@@ -1,0 +1,103 @@
+id: dea:scale-technology-v1
+version: 1.0.0
+metamodel_version: 1.0.0
+name: Technology Maturity Model Scale (5-level)
+description: 'Model-owned scale for the Technology Maturity Model. Five levels (L0..L4) scored against
+  the canonical v2 band instance (dea:maturity-bands-v2 v1.0.0): non-linear band widths 20/25/25/18/12
+  with per-level effort multipliers 1.0 → 6.0. Linear topology, exponential progression. Level semantics
+  are carried verbatim from the authoritative source; only the scoring fields differ between the frozen
+  v1-alpha lineage and the canonical v2 scheme.'
+status: stable
+ordering: ascending
+progression:
+  topology: linear
+  function: exponential
+levels:
+- id: L0
+  ordinal: 0
+  name: Emergent
+  definition: Practice exists but is person-dependent and informal
+  characteristics:
+  - Teams choose technologies independently
+  - No central inventory of technologies in use
+  - End-of-life software runs in production
+  - Skill coverage is opaque — single points of failure
+  expected_practices:
+  - Technology inventory published (even if informal)
+  - End-of-life software tracked
+  - Single points of failure identified
+  evidence_expectations:
+  - Shadow IT — teams using unapproved tools
+  - Production incidents due to skill gaps
+  - No CVE management process
+  short_description: Technology choices made without central visibility
+- id: L1
+  ordinal: 1
+  name: Structured
+  definition: Documented, agreed, but inconsistently enforced
+  characteristics:
+  - Approved technology list published
+  - SBOM generated for major systems
+  - CVE scanning in CI but not on all repos
+  - Skill matrix exists but is stale
+  expected_practices:
+  - SBOM on every production release
+  - CVE scanning covers ≥ 90% of repos
+  - Skill matrix refreshed quarterly
+  evidence_expectations:
+  - Approved technology list referenced in PRs
+  - Deprecation policy published
+  - New technology adoption process documented
+  short_description: Inventory exists but not enforced
+- id: L2
+  ordinal: 2
+  name: Systematic
+  definition: Formal, tooling-enabled, governance active
+  characteristics:
+  - Deprecation roadmap enforced
+  - Skill coverage has redundancy (no SPoF)
+  - Cost-per-workload tracked
+  - Technology refresh is planned, not reactive
+  expected_practices:
+  - Zero end-of-life software in production
+  - Technology refresh budget line item
+  - Cost transparency — every workload has cost owner
+  evidence_expectations:
+  - Quarterly tech radar published
+  - Skill coverage matrix with backups per critical skill
+  - Cost-per-workload dashboard
+  short_description: Technology is actively managed
+- id: L3
+  ordinal: 3
+  name: Adaptive
+  definition: Metrics-driven; organisation senses and responds
+  characteristics:
+  - Technology churn measured
+  - Technology ROI evaluated
+  - Innovation budget tracked vs. value delivered
+  - Skill market trends monitored
+  expected_practices:
+  - Technology churn trend decreasing
+  - Innovation ROI > 3x measured
+  - Skill gap analysis automated
+  evidence_expectations:
+  - Predictive models for technology obsolescence
+  - Vendor cost optimisation programmes
+  - Skill forecast model
+  short_description: Technology decisions are data-driven
+- id: L4
+  ordinal: 4
+  name: Self-Optimising
+  definition: Continuous improvement is autonomous, not programme-driven
+  characteristics:
+  - Technology choices are differentiators
+  - Open-source contributions back into technology stack
+  - Industry partnerships with key vendors
+  - Experimental sandboxes for emerging tech evaluation
+  expected_practices:
+  - None — continuous improvement is the practice
+  evidence_expectations:
+  - Conference talks on technology strategy
+  - Open-source maintainer roles
+  - Vendor advisory boards
+  short_description: Technology is a strategic asset
