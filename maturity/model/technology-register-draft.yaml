@@ -1,0 +1,81 @@
+# =============================================================================
+# maturity/model/technology-register-draft.yaml — CR-AM-13 Phase 4 SEED DRAFT
+# Seed criteria register unblocking the operations touchpoint
+# (tp-ops-x-technology). SEMANTICS ARE SEEDS: the model owners own refinement.
+# Framed from: the model's published description (stack fitness, technical debt, lifecycle management, skill coverage) plus a platform/tooling dimension for the operations touchpoint
+# =============================================================================
+id: dea:maturity-technology-register-v1
+repo_id: maturity-model-technology
+type: maturity-model
+name: Technology Maturity Model - criteria register (seed draft)
+domain: technology
+version: 1.1.0-draft
+metamodel_version: 1.0.0
+status: draft
+score_scheme: dea-maturity-v2
+band_reference:
+  id: dea:maturity-bands-v2
+  version: 1.0.0
+  organization: technehub-labs
+  repository: dea-metamodel
+scale_levels: [L0, L1, L2, L3, L4]
+scoring:
+  note: aggregation per the published maturity-scale.schema.json conventions; weights finalized by the model owners at register promotion.
+
+dimensions:
+- id: D1
+  name: Stack Fitness
+  sub_dimensions:
+  - id: D1-SD1
+    name: Fitness evaluation
+    criteria:
+    - { id: TEC-D1-SD1-C01, statement: Technology fitness is assessed against current and future workload needs, evidence: [Fitness reviews] }
+  - id: D1-SD2
+    name: Selection standards
+    criteria:
+    - { id: TEC-D1-SD2-C01, statement: Technology selection follows published standards and golden paths, evidence: [Standards catalogue, Golden-path templates] }
+- id: D2
+  name: Technical Debt
+  sub_dimensions:
+  - id: D2-SD1
+    name: Debt visibility
+    criteria:
+    - { id: TEC-D2-SD1-C01, statement: Technical debt is inventoried and risk-ranked, evidence: [Debt registers] }
+  - id: D2-SD2
+    name: Remediation
+    criteria:
+    - { id: TEC-D2-SD2-C01, statement: Remediation is funded in delivery roadmaps and trended, evidence: [Remediation plans, debt trends] }
+- id: D3
+  name: Lifecycle Management
+  sub_dimensions:
+  - id: D3-SD1
+    name: Version currency
+    criteria:
+    - { id: TEC-D3-SD1-C01, statement: Supported-version policy is defined and compliance measured, evidence: [Version compliance reports] }
+  - id: D3-SD2
+    name: End-of-life risk
+    criteria:
+    - { id: TEC-D3-SD2-C01, statement: EOL migrations are planned ahead of vendor dates, evidence: [EOL migration plans] }
+    - { id: TEC-D3-SD2-C02, statement: Patch/upgrade cadence meets risk policy, evidence: [Patch records] }
+- id: D4
+  name: Skill Coverage
+  sub_dimensions:
+  - id: D4-SD1
+    name: Skills
+    criteria:
+    - { id: TEC-D4-SD1-C01, statement: A skills matrix covers the stack and gaps drive development, evidence: [Skills matrices] }
+  - id: D4-SD2
+    name: Enablement
+    criteria:
+    - { id: TEC-D4-SD2-C01, statement: Teams are enabled with training and adoption support for platform technologies, evidence: [Enablement records] }
+- id: D5
+  name: Platform & Tooling Capability
+  sub_dimensions:
+  - id: D5-SD1
+    name: Observability toolchain
+    criteria:
+    - { id: TEC-D5-SD1-C01, statement: A complete observability toolchain (logging, metrics, tracing) is available and maintained as a platform capability, evidence: [Toolchain inventory], touchpoints: [tp-technology-x-operations] }
+  - id: D5-SD2
+    name: Automation platform
+    criteria:
+    - { id: TEC-D5-SD2-C01, statement: CI/CD and provisioning automation are available as platform capabilities, evidence: [Platform service catalogue] }
