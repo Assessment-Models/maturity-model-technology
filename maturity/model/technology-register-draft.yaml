@@ -1,5 +1,5 @@
 # =============================================================================
-# maturity/model/technology-register-draft.yaml — CR-AM-13 Phase 4 SEED DRAFT
+# maturity/model/technology-register-draft.yaml — CR-AM-13 Phase 4 SEED (ships in release 1.1.0)
 # Seed criteria register unblocking the operations touchpoint
 # (tp-ops-x-technology). SEMANTICS ARE SEEDS: the model owners own refinement.
 # Framed from: the model's published description (stack fitness, technical debt, lifecycle management, skill coverage) plus a platform/tooling dimension for the operations touchpoint
@@ -7,11 +7,13 @@
 id: dea:maturity-technology-register-v1
 repo_id: maturity-model-technology
 type: maturity-model
-name: Technology Maturity Model - criteria register (seed draft)
+name: Technology Maturity Model - criteria register (seed)
 domain: technology
-version: 1.1.0-draft
+version: 1.1.0
 metamodel_version: 1.0.0
 status: draft
+# Draft status is deliberate: semantics are seeds. Model owners refine (questionnaire,
+# weights) and promote to stable in this model's own change cycle, CR-AM-13 §8.
 score_scheme: dea-maturity-v2
 band_reference:
   id: dea:maturity-bands-v2
