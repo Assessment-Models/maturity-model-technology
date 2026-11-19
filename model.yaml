@@ -2,8 +2,9 @@ id: maturity-model-technology
 type: maturity-model
 name: Technology Maturity Model
 description: Technology Maturity Model — assesses stack fitness, technical debt, lifecycle management
-  and skill coverage.
-version: 1.0.0
+  and skill coverage. Release 1.1.0 ships a seeded criteria register draft and the operations
+  touchpoint mirror (CR-AM-13).
+version: 1.1.0
 conformance:
   contract:
     id: maturity-scale-contract
@@ -14,6 +15,8 @@ conformance:
 dependencies:
 - id: dea-maturity-bands-v2
   reference: v1.0.0
+touchpoints:
+  declaration: touchpoints.yaml
 compatibility:
   metamodel:
     minimum: 1.0.0
