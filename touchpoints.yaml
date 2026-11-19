@@ -1,0 +1,31 @@
+# =============================================================================
+# touchpoints.yaml — CR-AM-13 Phase 4 DRAFT (mirror record)
+# Contract: maturity-touchpoint-contract v0.1.0-draft (technehub-labs/dea-metamodel)
+# =============================================================================
+id: dea:touchpoints-technology-v1
+repo_id: maturity-model-technology
+version: 0.1.0-draft
+status: draft
+metamodel_version: 1.0.0
+contract: { id: maturity-touchpoint-contract, version: 0.1.0-draft, source: { organization: technehub-labs, repository: dea-metamodel } }
+touchpoints:
+- id: tp-technology-x-operations
+  mirrors: tp-ops-x-technology
+  peer_asset: dea:maturity-operations
+  peer_repo: maturity-model-operations
+  peer_touchpoint_id: tp-ops-x-technology
+  direction: feeds
+  mapping_type: feeds
+  summary: >-
+    This model's platform and tooling CAPABILITY (observability toolchain,
+    automation platforms) feeds the peer's D5 criteria, which score only the
+    EFFECTIVENESS of tool use in live operations.
+  overlap_resolution: >-
+    Platform and tool capability is assessed HERE. Effectiveness of tool use
+    in live operations is assessed BY THE PEER (D5).
+  criteria_mapping:
+  - ours: TEC-D5-SD1-C01
+    theirs: OPS-D5-SD1-C01
+    note: capability here; operational use by the peer
+  status_note: unblocked by this seed register; ops mapping update follows in the operations 2.0.0 release
+  reciprocity: mirrors-tp-ops-x-technology
