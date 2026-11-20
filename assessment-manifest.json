@@ -1,0 +1,24 @@
+{
+  "id": "maturity-model-technology",
+  "title": "Technology Maturity Model",
+  "layer": "maturity-model",
+  "architectural_concern": "Technology",
+  "version": "v1.1.0",
+  "license": "MIT",
+  "conformance_status": "structural",
+  "standards_alignment": [
+    "OpenDEA",
+    "AM-MODEL-REPOSITORY-STANDARD"
+  ],
+  "locales": [
+    "en"
+  ],
+  "dimensions": [
+    "Stack Fitness",
+    "Technical Debt",
+    "Lifecycle Management",
+    "Skill Coverage",
+    "Platform & Tooling Capability"
+  ],
+  "description": "Technology Maturity Model — assesses stack fitness, technical debt, lifecycle management and skill coverage."
+}
