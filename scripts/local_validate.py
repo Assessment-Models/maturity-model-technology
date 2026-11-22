@@ -58,7 +58,7 @@ if not src.get("organization") or not src.get("repository"):
     errors.append("model.yaml: conformance.source organization+repository are required")
 
 # 3 — scale
-EXPECTED_LEVELS = ['L0', 'L1', 'L2', 'L3', 'L4']
+EXPECTED_LEVELS = ['L-0', 'L-1', 'L-2', 'L-3', 'L-4', 'L-5']
 levels_actual = scale.get("levels") or []
 if len(levels_actual) != len(EXPECTED_LEVELS):
     errors.append(f"scale: expected {len(EXPECTED_LEVELS)} levels, found {len(levels_actual)}")
@@ -69,6 +69,8 @@ for i, lvl in enumerate(levels_actual):
         errors.append(f"scale: unexpected level id {lvl.get('id')!r}")
     if not lvl.get("name") or not lvl.get("definition"):
         errors.append(f"scale: level {lvl.get('id')} requires name and definition")
+if levels_actual and levels_actual[0].get("name") != "Not Assessed":
+    errors.append("scale: level ordinal 0 must be the Not Assessed entry (L-0) (dea-metamodel #214)")
 if scale.get("ordering") != "ascending":
     errors.append("scale: ordering must be 'ascending'")
 prog = scale.get("progression") or {}
