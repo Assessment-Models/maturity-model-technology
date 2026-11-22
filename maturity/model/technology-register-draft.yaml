@@ -20,7 +20,7 @@ band_reference:
   version: 1.0.0
   organization: technehub-labs
   repository: dea-metamodel
-scale_levels: [L0, L1, L2, L3, L4]
+scale_levels: [L-0, L-1, L-2, L-3, L-4, L-5]
 scoring:
   note: aggregation per the published maturity-scale.schema.json conventions; weights finalized by the model owners at register promotion.
 

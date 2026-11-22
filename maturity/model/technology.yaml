@@ -19,11 +19,12 @@ band_reference:
   organization: technehub-labs
   repository: dea-metamodel
 scale_levels:
-- L0
-- L1
-- L2
-- L3
-- L4
+- L-0
+- L-1
+- L-2
+- L-3
+- L-4
+- L-5
 relationships:
 - source_id: dea:maturity-technology
   target_id: dea:maturity-bands-v2
