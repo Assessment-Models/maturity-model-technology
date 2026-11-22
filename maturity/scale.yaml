@@ -1,20 +1,31 @@
 id: dea:scale-technology-v1
-version: 1.0.0
+version: 2.0.0
 metamodel_version: 1.0.0
 name: Technology Maturity Model Scale (5-level)
-description: 'Model-owned scale for the Technology Maturity Model. Five levels (L0..L4) scored against
-  the canonical v2 band instance (dea:maturity-bands-v2 v1.0.0): non-linear band widths 20/25/25/18/12
+description: 'Model-owned scale for the Technology Maturity Model. Five capability levels (L-1..L-5) scored
+  against the canonical v2 band instance (dea:maturity-bands-v2 v1.0.0): non-linear band widths 20/25/25/18/12
   with per-level effort multipliers 1.0 → 6.0. Linear topology, exponential progression. Level semantics
   are carried verbatim from the authoritative source; only the scoring fields differ between the frozen
-  v1-alpha lineage and the canonical v2 scheme.'
+  v1-alpha lineage and the canonical v2 scheme. Adoption of the L-0 Not Assessed + L-1..L-5 numbering
+  follows dea-metamodel #214 and remains annotated as adoption-pending until the canonical owners ratify.'
 status: stable
 ordering: ascending
 progression:
   topology: linear
   function: exponential
 levels:
-- id: L0
+- id: L-0
   ordinal: 0
+  name: Not Assessed
+  definition: 'Criterion not assessed: no evidence examined. Not a capability level: it scores 0 points
+    and lowers evidence-confidence, and it never inflates the index.'
+  characteristics:
+  - No evidence collected or verified.
+  expected_practices: []
+  evidence_expectations: []
+  short_description: Unassessed
+- id: L-1
+  ordinal: 1
   name: Emergent
   definition: Practice exists but is person-dependent and informal
   characteristics:
@@ -31,8 +42,8 @@ levels:
   - Production incidents due to skill gaps
   - No CVE management process
   short_description: Technology choices made without central visibility
-- id: L1
-  ordinal: 1
+- id: L-2
+  ordinal: 2
   name: Structured
   definition: Documented, agreed, but inconsistently enforced
   characteristics:
@@ -49,8 +60,8 @@ levels:
   - Deprecation policy published
   - New technology adoption process documented
   short_description: Inventory exists but not enforced
-- id: L2
-  ordinal: 2
+- id: L-3
+  ordinal: 3
   name: Systematic
   definition: Formal, tooling-enabled, governance active
   characteristics:
@@ -67,8 +78,8 @@ levels:
   - Skill coverage matrix with backups per critical skill
   - Cost-per-workload dashboard
   short_description: Technology is actively managed
-- id: L3
-  ordinal: 3
+- id: L-4
+  ordinal: 4
   name: Adaptive
   definition: Metrics-driven; organisation senses and responds
   characteristics:
@@ -85,8 +96,8 @@ levels:
   - Vendor cost optimisation programmes
   - Skill forecast model
   short_description: Technology decisions are data-driven
-- id: L4
-  ordinal: 4
+- id: L-5
+  ordinal: 5
   name: Self-Optimising
   definition: Continuous improvement is autonomous, not programme-driven
   characteristics:

@@ -19,4 +19,4 @@ standard:
 model:
   id: maturity-model-technology
   name: Technology Maturity Model
-  version: "1.0.0"
+  version: "2.0.0"
