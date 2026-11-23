@@ -1,12 +1,12 @@
 # =============================================================================
-# touchpoints.yaml — CR-AM-13 v0.1.0 (mirror record, release 1.1.0)
+# touchpoints.yaml — CR-AM-13 v0.1.1 (mirror record, release 1.1.0)
 # Contract: maturity-touchpoint-contract v0.1.0-draft (publication tracked in
 # technehub-labs/dea-metamodel issue #213); this file remains status: draft until
 # the contract publishes.
 # =============================================================================
 id: dea:touchpoints-technology-v1
 repo_id: maturity-model-technology
-version: 0.1.0
+version: 0.1.1
 status: draft
 metamodel_version: 1.0.0
 contract: { id: maturity-touchpoint-contract, version: 0.1.0-draft, source: { organization: technehub-labs, repository: dea-metamodel } }
@@ -30,8 +30,9 @@ touchpoints:
     theirs: OPS-D5-SD1-C01
     note: capability here; operational use by the peer
   status_note: >-
-    Reciprocity complete on the content side: the peer's touchpoints.yaml v0.2.0
-    (maturity-model-operations release 2.0.0, PR #7) cites TEC-D5-SD1-C01 on its
-    side of this same touchpoint. Bindings become citable once v1.1.0 (this repo)
-    and v2.0.0 (peer) are tagged.
+    The peer's reciprocal touchpoint record is merged on main in Operations
+    touchpoints.yaml v0.2.3 (PR #17, merge commit c11b337). Both manifests
+    declare matching peer IDs, mirror pointers and criterion mappings. Release
+    tags and registry pins remain part of the portfolio release reconciliation;
+    the touchpoint contract itself remains draft.
   reciprocity: mirrors-tp-ops-x-technology
