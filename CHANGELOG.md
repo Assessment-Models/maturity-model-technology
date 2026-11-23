@@ -6,6 +6,10 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- CR-AM-13 Phase 2: refresh the Operations peer status to the merged `touchpoints.yaml` v0.2.3 baseline (PR #17, merge commit `c11b337`) and increment this draft touchpoint manifest to v0.1.1. Criterion mappings and assessment ownership are unchanged.
+
 ### Changed — BREAKING
 
 - **Scale level renumbering adopted (dea-metamodel #214): `L-0 Not Assessed` + `L-1..L-5`.** Release 2.0.0 — blocked on upstream ratification of dea-metamodel #214; do not merge before the renumbered canonical scale instance is released and CI pins are bumped.
